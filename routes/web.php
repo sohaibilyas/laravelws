@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    broadcast(new MessageEvent('hello world' . rand(0, 43)))->toOthers();
+    broadcast(new MessageEvent('hello world' . rand(0, 43)));
 });
