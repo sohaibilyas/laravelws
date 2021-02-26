@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\MessageEvent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    broadcast(new MessageEvent('hello world' . rand(0, 43)))->toOthers();
 });
