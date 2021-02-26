@@ -11,7 +11,7 @@ return [
         'port' => env('LARAVEL_WEBSOCKETS_PORT', 6001),
     ],
 
-    'verify_peer' => false,
+    
 
     /*
      * This package comes with multi tenancy out of the box. Here you can
@@ -112,6 +112,7 @@ return [
      * You can see all available options at: http://php.net/manual/en/context.ssl.php
      */
     'ssl' => [
+
         /*
          * Path to local certificate file on filesystem. It must be a PEM encoded file which
          * contains your certificate and private key. It can optionally contain the
@@ -140,4 +141,5 @@ return [
      * `ChannelManager` interface provided by this package.
      */
     'channel_manager' => \BeyondCode\LaravelWebSockets\WebSockets\Channels\ChannelManagers\ArrayChannelManager::class,
+    'verify_peer' => false,
 ];
